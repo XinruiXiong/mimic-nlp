@@ -2,7 +2,7 @@
 use mimic-iv, mimic-iv-ed, mimic-iv-note to perform 3 clinical prediction task
 
 
-## This work is based on the work from [niulab](https://github.com/nliulab/mimic4ed-benchmark)
+### This work is based on the work from [niulab](https://github.com/nliulab/mimic4ed-benchmark)
 
 
 ### 0. Data Preparation
