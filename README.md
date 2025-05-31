@@ -11,7 +11,7 @@ MIMIC-IV-ED can be downloaded from [https://physionet.org/content/mimic-iv-ed/1.
 
 MIMIC-IV can be downloaded from [https://physionet.org/content/mimiciv/1.0/](https://physionet.org/content/mimiciv/1.0/)
 
-MIMIC-IV-Note can be downloaded from [[https://physionet.org/content/mimiciv/1.0/](https://www.physionet.org/content/mimic-iv-note/2.2/)]
+MIMIC-IV-Note can be downloaded from [https://www.physionet.org/content/mimic-iv-note/2.2/](https://www.physionet.org/content/mimic-iv-note/2.2/)
 
 ***NOTE** It should be noted that upon downloading and extracting the MIMIC databases from their compressed files, the directory `/mimic-iv-ed-1.0/ed` and should `/mimic-iv-ed-1.0/note` be moved/copied to the directory containing MIMIC-IV data `/mimic-iv-1.0`.
 
