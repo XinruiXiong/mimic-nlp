@@ -1,0 +1,4 @@
+Input Notebook:  task2.ipynb
+Output Notebook: task2_output.ipynb
+Executing:   0%|          | 0/10 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:  10%|█         | 1/10 [00:15<02:23, 15.89s/cell]Executing:  20%|██        | 2/10 [01:24<06:15, 46.95s/cell]Executing:  40%|████      | 4/10 [01:31<01:57, 19.59s/cell]Executing:  50%|█████     | 5/10 [01:41<01:23, 16.66s/cell]Executing:  60%|██████    | 6/10 [04:25<04:07, 61.92s/cell]Executing:  80%|████████  | 8/10 [07:46<02:39, 79.93s/cell]Executing:  90%|█████████ | 9/10 [07:48<01:00, 60.32s/cell]Executing: 100%|██████████| 10/10 [07:48<00:00, 44.48s/cell]Executing: 100%|██████████| 10/10 [07:52<00:00, 47.23s/cell]

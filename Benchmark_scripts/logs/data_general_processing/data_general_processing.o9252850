@@ -1,0 +1,18 @@
+Before filtering for "age" >= 18 : master dataset size =  448972
+After filtering for "age" >= 18 : master dataset size =  448804
+Before filtering for non-null "triage_acuity" >= 18 : master dataset size =  448804
+After filtering for non-null "triage_acuity" >= 18 : master dataset size =  441437
+Variable 'add_triage_MAP' successfully added
+Variable 'add_score_CCI' successfully added
+Variable 'Score_CART' successfully added
+Variable 'Score_REMS' successfully added
+Variable 'Score_NEWS' successfully added
+Variable 'Score_NEWS2' successfully added
+Variable 'Score_MEWS' successfully added
+Variable 'add_triage_MAP' successfully added
+Variable 'add_score_CCI' successfully added
+Variable 'Score_CART' successfully added
+Variable 'Score_REMS' successfully added
+Variable 'Score_NEWS' successfully added
+Variable 'Score_NEWS2' successfully added
+Variable 'Score_MEWS' successfully added

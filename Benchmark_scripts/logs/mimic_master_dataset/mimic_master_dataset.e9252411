@@ -1,0 +1,23 @@
+2025-05-30 23:26:16.938100: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "/u/home/x/xxiong/mimic-nlp/Benchmark_scripts/extract_master_dataset.py", line 53, in <module>
+    df_discharge = read_discharge_table(os.path.join(mimic_iv_hosp_path, 'note', 'discharge.csv.gz'))
+  File "/u/home/x/xxiong/mimic-nlp/Benchmark_scripts/helpers_new.py", line 954, in read_discharge_table
+    df_discharge = read_csv_auto(discharge_table_path)
+  File "/u/home/x/xxiong/mimic-nlp/Benchmark_scripts/helpers_new.py", line 18, in read_csv_auto
+    return pd.read_csv(filepath if filepath.endswith('.gz') else filepath + '.gz',
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 934, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1218, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/common.py", line 711, in get_handle
+    handle = gzip.GzipFile(  # type: ignore[assignment]
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/gzip.py", line 173, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/u/scratch/x/xxiong/mimiciv/1.0/hosp/note/discharge.csv.gz'
