@@ -2,6 +2,9 @@
 use mimic-iv, mimic-iv-ed, mimic-iv-note to perform 3 clinical prediction task
 
 
+## This work is based on the work from [niulab](https://github.com/nliulab/mimic4ed-benchmark)
+
+
 ### 0. Data Preparation
 
 MIMIC-IV-ED can be downloaded from [https://physionet.org/content/mimic-iv-ed/1.0/](https://physionet.org/content/mimic-iv-ed/1.0/) 
@@ -54,4 +57,7 @@ papermill task{i}.ipynb task1_output.ipynb -k python3
 ~~~
 
 change i to 1,2,3.
+
+
+
 
