@@ -39,15 +39,26 @@ python nlp_script.py \
   --input_csv {master_dataset_path} \
   --output_csv {output_path} \
   --model_name emilyalsentzer/Bio_ClinicalBERT \
+  --window_size 512 \
+  --stride 256 \
   --batch_size 16
 ~~~
 
 You may change argument if you want.
 
+### 3.5 Embeddings evaluation
+~~~
+python t-SNE.py \
+  --input_csv {NLPed_master_dataset_path} \
+  --output_png ./tsne_out/tsne_plot_outcome_ed_revisit_3d.png \
+  --n_pca 50 \
+  --n_jobs 4
+~~~
+You may change argument in the py file to color it with different prediction targets.
 
 ### 4. Cohort Filtering and Data Processing
 ~~~
-python data_general_processing.py --master_dataset_path {master_dataset_path} --output_path {output_path}
+python data_general_processing.py --master_dataset_path {NLPed_master_dataset_path} --output_path {output_path}
 ~~~
 
 ### 5. Prediction Task Selection and Model evaluation
