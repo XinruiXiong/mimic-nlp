@@ -7,4 +7,6 @@
 #$ -l h_vmem=64G
 #$ -pe sharedmem 8
 
-python extract_master_dataset.py --mimic4_path /u/scratch/x/xxiong/mimiciv/1.0 --output_path /u/scratch/x/xxiong/mimic-nlp-bench
+python extract_master_dataset.py --mimic4_path /u/scratch/x/xxiong/mimiciv/1.0 --output_path /u/scratch/x/xxiong/mimic-nlp-bench-new
+
+# python extract_master_dataset.py --mimic4_path /u/scratch/x/xxiong/mimiciv/1.0 --output_path /u/scratch/x/xxiong/mimic-temp

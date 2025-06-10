@@ -1,0 +1,17 @@
+Performing t-SNE using 8 cores.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.500000
+Computing input similarities...
+Building tree...
+ - point 44897 of 448972
+ - point 89794 of 448972
+ - point 134691 of 448972
+ - point 179588 of 448972
+ - point 224485 of 448972
+ - point 269382 of 448972
+ - point 314279 of 448972
+ - point 359176 of 448972
+ - point 404074 of 448972
+ - point 448970 of 448972
+Done in 1323.00 seconds (sparsity = 0.000373)!
+Learning embedding...
+/work/UGE/8.6.4/n7143/job_scripts/9393437: line 14:  4643 Killed                  python t-SNE.py --input_csv /u/scratch/x/xxiong/mimic-nlp-bench-new/master_dataset_with_note_embed.csv --output_png ./tsne_out/tsne_plot_outcome_ed_revisit_3d.png --n_pca 50 --n_jobs 8

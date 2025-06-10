@@ -10,5 +10,5 @@
 
 
 python data_general_processing.py \
-  --master_dataset_path /u/scratch/x/xxiong/mimic-nlp-bench \
-  --output_path /u/scratch/x/xxiong/mimic-nlp-bench
+  --master_dataset_path /u/scratch/x/xxiong/mimic-nlp-bench-new \
+  --output_path /u/scratch/x/xxiong/mimic-nlp-bench-new

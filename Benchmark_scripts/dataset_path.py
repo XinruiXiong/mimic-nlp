@@ -10,4 +10,4 @@
 # output_path = '/Users/jin/Desktop/work_local/mimic4/Output_270922'
 #output_path = '/Users/siqili/Desktop/National University of Singapore/Liu Nan - WP_MIMIC_Benchmark'
 
-output_path = '/u/scratch/x/xxiong/mimic-bench'
+# output_path = '/u/scratch/x/xxiong/mimic-bench'

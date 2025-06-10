@@ -956,12 +956,44 @@ def read_discharge_table(discharge_table_path):
     return df_discharge
 
 
+# def merge_discharge_text_into_master(df_master, df_discharge):
+#     df_discharge_sorted = df_discharge.sort_values(['subject_id', 'hadm_id', 'charttime'])
+#     df_text_agg = df_discharge_sorted.groupby(['subject_id', 'hadm_id'])['text'].apply(lambda x: ' '.join(x.dropna())).reset_index()
+#     df_text_agg.rename(columns={'text': 'discharge_summary_text'}, inplace=True)
+    
+#     df_master = pd.merge(df_master, df_text_agg, on=['subject_id', 'hadm_id'], how='left')
+#     df_master['discharge_summary_text'] = df_master['discharge_summary_text'].fillna('')
+    
+#     return df_master
+
+
 def merge_discharge_text_into_master(df_master, df_discharge):
-    df_discharge_sorted = df_discharge.sort_values(['subject_id', 'hadm_id', 'charttime'])
-    df_text_agg = df_discharge_sorted.groupby(['subject_id', 'hadm_id'])['text'].apply(lambda x: ' '.join(x.dropna())).reset_index()
-    df_text_agg.rename(columns={'text': 'discharge_summary_text'}, inplace=True)
-    
-    df_master = pd.merge(df_master, df_text_agg, on=['subject_id', 'hadm_id'], how='left')
+    from tqdm import tqdm
+
+    df_discharge['charttime'] = pd.to_datetime(df_discharge['charttime'])
+    df_master['intime'] = pd.to_datetime(df_master['intime'])
+
+    # 扩展 df_master，每条记录标注 index 以便最后还原
+    df_master = df_master.reset_index(drop=False).rename(columns={"index": "master_index"})
+
+    # 多对多 merge：subject_id 相同的 notes 全部 merge 上来
+    df_merge = pd.merge(df_master[['master_index', 'subject_id', 'intime']],
+                        df_discharge[['subject_id', 'charttime', 'text']],
+                        on='subject_id',
+                        how='left')
+
+    # 过滤掉未来笔记
+    df_merge = df_merge[df_merge['charttime'] < df_merge['intime']]
+
+    # 按每条 visit 的 index 聚合 notes
+    df_text_agg = df_merge.groupby('master_index')['text'].apply(lambda x: ' '.join(x.dropna())).reset_index()
+
+    # 合并回主表
+    df_master = pd.merge(df_master, df_text_agg, on='master_index', how='left')
+    df_master.rename(columns={'text': 'discharge_summary_text'}, inplace=True)
     df_master['discharge_summary_text'] = df_master['discharge_summary_text'].fillna('')
-    
+
+    # 去掉中间列
+    df_master.drop(columns=['master_index'], inplace=True)
+
     return df_master

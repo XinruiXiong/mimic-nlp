@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/u/home/x/xxiong/mimic-nlp/Benchmark_scripts/data_general_processing.py", line 85, in <module>
+    df_train.to_csv(os.path.join(output_path, 'train.csv'), index=False)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/core/generic.py", line 3551, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/formats/format.py", line 1180, in to_csv
+    csv_formatter.save()
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/formats/csvs.py", line 241, in save
+    with get_handle(
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/common.py", line 694, in get_handle
+    check_parent_directory(str(handle))
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/pandas/io/common.py", line 568, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/u/scratch/x/xxiong/mimic-nlp-bench-new/dataset'

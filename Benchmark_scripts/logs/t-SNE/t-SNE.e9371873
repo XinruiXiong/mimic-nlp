@@ -1,0 +1,28 @@
+Performing t-SNE using 8 cores.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.500000
+Computing input similarities...
+Building tree...
+ - point 44897 of 448972
+ - point 89794 of 448972
+ - point 134691 of 448972
+ - point 179588 of 448972
+ - point 224486 of 448972
+ - point 269385 of 448972
+ - point 314279 of 448972
+ - point 359177 of 448972
+ - point 404074 of 448972
+ - point 448970 of 448972
+Done in 1330.00 seconds (sparsity = 0.000373)!
+Learning embedding...
+Iteration 51: error is 129.830265 (50 iterations in 137.00 seconds)
+Iteration 101: error is 130.879731 (50 iterations in 149.00 seconds)
+Iteration 151: error is 130.990184 (50 iterations in 164.00 seconds)
+Iteration 201: error is 130.949292 (50 iterations in 189.00 seconds)
+Iteration 251: error is 130.734741 (50 iterations in 219.00 seconds)
+Iteration 301: error is 7.957785 (50 iterations in 239.00 seconds)
+Iteration 351: error is 7.620283 (50 iterations in 238.00 seconds)
+Iteration 401: error is 7.489459 (50 iterations in 235.00 seconds)
+Iteration 451: error is 7.413176 (50 iterations in 238.00 seconds)
+Iteration 501: error is 7.349064 (50 iterations in 225.00 seconds)
+Iteration 551: error is 7.290767 (50 iterations in 221.00 seconds)
+/work/UGE/8.6.4/n7144/job_scripts/9371873: line 14: 59886 Killed                  python t-SNE.py --input_csv /u/scratch/x/xxiong/mimic-nlp-bench-new/master_dataset_with_note_embed.csv --output_png ./tsne_out/tsne_plot_critical.png --n_pca 50 --n_jobs 8

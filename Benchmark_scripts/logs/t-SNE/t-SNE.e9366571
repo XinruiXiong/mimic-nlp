@@ -1,0 +1,57 @@
+Performing t-SNE using 16 cores.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.500000
+Computing input similarities...
+Building tree...
+ - point 44897 of 448972
+ - point 89794 of 448972
+ - point 134694 of 448972
+ - point 179588 of 448972
+ - point 224485 of 448972
+ - point 269382 of 448972
+ - point 314279 of 448972
+ - point 359176 of 448972
+ - point 404073 of 448972
+ - point 448970 of 448972
+Done in 771.00 seconds (sparsity = 0.000373)!
+Learning embedding...
+Iteration 51: error is 129.829744 (50 iterations in 134.00 seconds)
+Iteration 101: error is 130.879437 (50 iterations in 129.00 seconds)
+Iteration 151: error is 130.989780 (50 iterations in 136.00 seconds)
+Iteration 201: error is 130.945621 (50 iterations in 158.00 seconds)
+Iteration 251: error is 130.710497 (50 iterations in 197.00 seconds)
+Iteration 301: error is 7.955517 (50 iterations in 206.00 seconds)
+Iteration 351: error is 7.712035 (50 iterations in 216.00 seconds)
+Iteration 401: error is 7.550906 (50 iterations in 215.00 seconds)
+Iteration 451: error is 7.425470 (50 iterations in 211.00 seconds)
+Iteration 501: error is 7.356844 (50 iterations in 210.00 seconds)
+Iteration 551: error is 7.295145 (50 iterations in 216.00 seconds)
+Iteration 601: error is 7.245190 (50 iterations in 209.00 seconds)
+Iteration 651: error is 7.206998 (50 iterations in 234.00 seconds)
+Iteration 701: error is 7.174343 (50 iterations in 222.00 seconds)
+Iteration 751: error is 7.146535 (50 iterations in 229.00 seconds)
+Iteration 801: error is 7.115384 (50 iterations in 216.00 seconds)
+Iteration 851: error is 7.084251 (50 iterations in 246.00 seconds)
+Iteration 901: error is 7.059709 (50 iterations in 251.00 seconds)
+Iteration 951: error is 7.038322 (50 iterations in 243.00 seconds)
+Iteration 1000: error is 7.018382 (50 iterations in 218.00 seconds)
+Fitting performed in 4096.00 seconds.
+Traceback (most recent call last):
+  File "/u/home/x/xxiong/mimic-nlp/Benchmark_scripts/t-SNE.py", line 39, in <module>
+    plt.savefig(args.output_png, dpi=300)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/pyplot.py", line 979, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/figure.py", line 3046, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/PIL/Image.py", line 2428, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './tsne_out/tsne_plot.png'

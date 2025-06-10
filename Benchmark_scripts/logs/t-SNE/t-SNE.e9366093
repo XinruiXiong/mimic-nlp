@@ -1,0 +1,4 @@
+/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/sklearn/manifold/_t_sne.py:795: FutureWarning: The default initialization in TSNE will change from 'random' to 'pca' in 1.2.
+  warnings.warn(
+/u/home/x/xxiong/miniforge3/envs/mimic-bench/lib/python3.9/site-packages/sklearn/manifold/_t_sne.py:805: FutureWarning: The default learning rate in TSNE will change from 200.0 to 'auto' in 1.2.
+  warnings.warn(

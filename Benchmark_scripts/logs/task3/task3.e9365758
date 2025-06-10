@@ -1,0 +1,5 @@
+Input Notebook:  task3.ipynb
+Output Notebook: task3_output.ipynb
+Executing:   0%|          | 0/10 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+2025-06-08 07:57:29.845676: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Executing:  10%|█         | 1/10 [00:14<02:07, 14.11s/cell]Executing:  20%|██        | 2/10 [01:36<07:12, 54.04s/cell]Executing:  40%|████      | 4/10 [01:37<02:04, 20.73s/cell]Executing:  50%|█████     | 5/10 [01:43<01:20, 16.11s/cell]Executing:  60%|██████    | 6/10 [03:16<02:38, 39.57s/cell]Executing:  80%|████████  | 8/10 [05:31<01:45, 52.62s/cell]Executing:  90%|█████████ | 9/10 [05:32<00:39, 39.67s/cell]Executing: 100%|██████████| 10/10 [05:32<00:00, 29.25s/cell]Executing: 100%|██████████| 10/10 [05:34<00:00, 33.42s/cell]
